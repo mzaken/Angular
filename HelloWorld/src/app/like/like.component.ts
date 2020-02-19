@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ConditionalExpr } from '@angular/compiler';
 
 @Component({
   selector: 'like',
   templateUrl: './like.component.html',
   styleUrls: ['./like.component.css']
 })
-export class LikeComponent implements OnInit {
-  @input('like') isLiked : boolean;
-  @input('counter')counter: number;
+export class LikeComponent {
+  @Input('isActive') isActive : boolean;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input('likesCounter') likesCounter: number;
 
   onClick() {
-    isLiked ? counter-- : counter ++;
-    isLiked = !isLiked
+    this.isActive ? this.likesCounter-- : this.likesCounter ++;
+    this.isActive = !this.isActive
   }
 }

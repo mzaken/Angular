@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorite-icon.component.css']
 })
 export class FavoriteIconComponent implements OnInit {
-  private isFavorite : boolean
+  isFavorite : boolean
   //faStar = 
   constructor() {
 
