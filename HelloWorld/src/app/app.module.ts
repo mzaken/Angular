@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FavoriteIconComponent } from './favorite-icon/favorite-icon.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorsComponent,
     CoursesComponent,
-    FavoriteIconComponent
+    FavoriteIconComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
