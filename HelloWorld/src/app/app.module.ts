@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,8 @@ import { AuthorsComponent } from './authors/authors.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FavoriteIconComponent } from './favorite-icon/favorite-icon.component';
 import { LikeComponent } from './like/like.component';
+import { SomethingComponent } from './something/something.component';
+import { UserItemComponent } from './user-item/user-item.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { LikeComponent } from './like/like.component';
     AuthorsComponent,
     CoursesComponent,
     FavoriteIconComponent,
-    LikeComponent
+    LikeComponent,
+    SomethingComponent,
+    UserItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
