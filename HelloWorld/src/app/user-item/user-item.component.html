@@ -1,3 +1,4 @@
 <input type="text" (change)="onChange($event)">
 <p>{{ text }}</p>
-<button>generate</button>
+<button (click)="generateRandomNum()">generate</button>
+<p [class.red]="rand <= 50" [class.green]="rand > 50">{{ rand }}</p>
