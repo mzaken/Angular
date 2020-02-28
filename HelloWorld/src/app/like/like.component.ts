@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ConditionalExpr } from '@angular/compiler';
 
 @Component({
   selector: 'like',

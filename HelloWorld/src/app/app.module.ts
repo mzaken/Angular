@@ -10,6 +10,7 @@ import { FavoriteIconComponent } from './favorite-icon/favorite-icon.component';
 import { LikeComponent } from './like/like.component';
 import { SomethingComponent } from './something/something.component';
 import { UserItemComponent } from './user-item/user-item.component';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UserItemComponent } from './user-item/user-item.component';
     FavoriteIconComponent,
     LikeComponent,
     SomethingComponent,
-    UserItemComponent
+    UserItemComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,
