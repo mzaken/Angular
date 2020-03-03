@@ -15,8 +15,8 @@ export class PasswordValidation {
     }
 
     static validateConfirmAndNewPassword(control: FormGroup) : ValidationErrors | null {
-        let newPass = control.get('newPass').value;
-        let confirmPass = control.get('confirm').value;
+        let newPass = control.get('newPassword').value;
+        let confirmPass = control.get('confirmPassword').value;
         
         if (newPass != confirmPass) {
             return {validateConfirmAndNewPassword : true};

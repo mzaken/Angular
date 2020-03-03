@@ -12,22 +12,22 @@ export class PasswordChangeFormComponent {
 
   constructor() {
     this.renewPasswordForm = new FormGroup({
-      old : new FormControl('', Validators.required, PasswordValidation.validateOldPassword),
-      newPass : new FormControl('', Validators.required),
-      confirm : new FormControl('', Validators.required)
+      oldPassword : new FormControl('', Validators.required, PasswordValidation.validateOldPassword),
+      newPassword : new FormControl('', Validators.required),
+      confirmPassword : new FormControl('', Validators.required)
     }, PasswordValidation.validateConfirmAndNewPassword);
   }
 
-  get old() {
-    return this.renewPasswordForm.get('old');
+  get oldPassword() {
+    return this.renewPasswordForm.get('oldPassword');
   }
 
-  get newPass() {
-    return this.renewPasswordForm.get('newPass');
+  get newPassword() {
+    return this.renewPasswordForm.get('newPassword');
   }
 
-  get confirm() {
-    return this.renewPasswordForm.get('confirm');
+  get confirmPassword() {
+    return this.renewPasswordForm.get('confirmPassword');
   }
 
   submitForm(form) {
