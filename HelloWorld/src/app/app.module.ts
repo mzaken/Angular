@@ -12,6 +12,7 @@ import { SomethingComponent } from './something/something.component';
 import { UserItemComponent } from './user-item/user-item.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { CourseFormComponent } from './course-form/course-form.component';
+import { PasswordChangeFormComponent } from './password-change-form/password-change-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CourseFormComponent } from './course-form/course-form.component';
     SomethingComponent,
     UserItemComponent,
     ZippyComponent,
-    CourseFormComponent
+    CourseFormComponent,
+    PasswordChangeFormComponent
   ],
   imports: [
     BrowserModule,
