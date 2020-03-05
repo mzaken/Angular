@@ -13,10 +13,18 @@ export interface Post {
 })
 export class PostsService {
   url = 'https://jsonplaceholder.typicode.com/posts';
-
+  
   constructor(private http: HttpClient) {}
-
+  
   getPosts() {
     return this.http.get<Post[]>(this.url);
+  }
+
+  createPost(post: Post) {
+    return this.http.post(this.url, JSON.stringify(post));
+  }
+  
+  deletePost(post: Post) {
+    return this.http.delete(this.url + '/' + post.id);
   }
 }
