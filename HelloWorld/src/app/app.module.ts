@@ -13,6 +13,10 @@ import { UserItemComponent } from './user-item/user-item.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { PasswordChangeFormComponent } from './password-change-form/password-change-form.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostsService } from 'services/posts.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,15 +29,19 @@ import { PasswordChangeFormComponent } from './password-change-form/password-cha
     UserItemComponent,
     ZippyComponent,
     CourseFormComponent,
-    PasswordChangeFormComponent
+    PasswordChangeFormComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PostsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
