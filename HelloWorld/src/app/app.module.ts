@@ -17,6 +17,8 @@ import { PostsComponent } from './posts/posts.component';
 import { PostsService } from 'services/posts.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppErrorHandler } from './common/app-error-handler';
+import { FollowersComponent } from './followers/followers.component';
+import { FollowersService } from 'services/followers.service';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { AppErrorHandler } from './common/app-error-handler';
     ZippyComponent,
     CourseFormComponent,
     PasswordChangeFormComponent,
-    PostsComponent
+    PostsComponent,
+    FollowersComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { AppErrorHandler } from './common/app-error-handler';
   ],
   providers: [
     PostsService,
+    FollowersService,
     { provide: ErrorHandler, useClass: AppErrorHandler }
   ],
   bootstrap: [AppComponent]
