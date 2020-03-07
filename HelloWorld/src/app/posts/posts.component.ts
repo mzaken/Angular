@@ -29,6 +29,7 @@ export class PostsComponent implements OnInit {
       id: null,
       userId: null,
       body: null };
+    this.posts.splice(0, 0, post);
     
     input.value = '';
   
@@ -36,9 +37,10 @@ export class PostsComponent implements OnInit {
       .subscribe(
         response => {
           post['id'] = response.id;
-          this.posts.splice(0, 0, post);
         }, 
         (error: AppError) => {
+          this.posts.splice(0, 1);
+
           if (error instanceof BadRequestError) {
             // bad request error msg
           }
@@ -47,14 +49,15 @@ export class PostsComponent implements OnInit {
   }
 
   deletePost(post: Post) {
+    let index = this.posts.indexOf(post);
+    this.posts.splice(index, 1);      
     
     this.service.delete(post.id)
     .subscribe(
-      response => {
-          let index = this.posts.indexOf(post);
-          this.posts.splice(index, 1);      
-      }, 
+      null, 
       (error: AppError) => {
+        this.posts.splice(index, 0, post);
+
         if (error instanceof NotFoundError)
           alert('This post has already been deleted.')
         else throw error;
